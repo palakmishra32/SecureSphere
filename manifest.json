@@ -1,0 +1,38 @@
+{
+  "manifest_version": 2,
+  "name": "SecureGuardExtension",
+  "version": "1.2",
+  "description": "A browser extension that provides password protection, login anomaly detection, and phishing prevention, and real-time file download scanning.",
+  "icons": {
+    "48": "assets/icon.png"
+  },
+  "browser_action": {
+    "default_popup": "virusTotal.html",  
+    "default_icon": "assets/icon.png"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs",
+    "<all_urls>",
+    "downloads",
+    "notifications",
+    "webRequest",
+    "webRequestBlocking"
+  ],
+  "web_accessible_resources": [
+    "assets/*",
+    "options.html" 
+  ],
+  "options_page": "options.html"  
+}

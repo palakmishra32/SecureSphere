@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SecureGuard Options</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>SecureGuard Extension Options</h1>
+
+    <label>
+        Enable Real-time Scanning:
+        <input type="checkbox" id="enableScanning">
+    </label>
+    <br><br>
+
+    <label>
+        Scanning Sensitivity:
+        <select id="sensitivityLevel">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+        </select>
+    </label>
+    <br><br>
+
+    <button id="saveOptions">Save Options</button>
+
+    <script src="options.js"></script>
+</body>
+</html>
